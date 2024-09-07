@@ -83,7 +83,7 @@ function Modal(props) {
      }
      
      const MainDeleter= async ()=>{
-          const responce= await axios.delete(`https://synergy-labs-assignment-fgug.onrender.com/delete/${SingleData.id}`);
+          const responce= await axios.delete(`http://localhost:300/delete/${SingleData.id}`);
          if(responce.data.sucess)
          {
             setdelete(true);

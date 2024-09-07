@@ -115,7 +115,8 @@ function Controller(app)
 
     app.delete("/delete/:id",async (req,res)=>{
          const {id}= req.params;
-         const responce= await ModelSchema.findOneAndDelete(id);
+         console.log("Delete",id);
+         const responce= await ModelSchema.findOneAndDelete({id:id});
          if(!responce)
          {
              res.json({sucess:false,error:"Not Deleted"});
