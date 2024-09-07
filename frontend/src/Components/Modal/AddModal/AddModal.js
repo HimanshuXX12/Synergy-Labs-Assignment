@@ -22,7 +22,7 @@ function AddModal() {
     }
 
      const createRequest= async ()=>{
-        const responce= await axios.post(`http://localhost:300/create`,formData);
+        const responce= await axios.post(`https://synergy-labs-assignment-fgug.onrender.com/create`,formData);
         console.log("responce",responce);
         if(responce.data.sucess)
         {

@@ -21,7 +21,7 @@ function Home() {
  
 
     const fetcher= async ()=>{
-         const responce= await axios.get("http://localhost:300/get");
+         const responce= await axios.get("https://synergy-labs-assignment-fgug.onrender.com/get");
          console.log(responce);
          setData(responce.data.responce);
     }

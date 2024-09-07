@@ -58,7 +58,7 @@ function Modal(props) {
 
                 if(email_element.value && phone_element.value && name_element.value && age_element.value)
                 {
-                    const responce= await axios.put(`http://localhost:300/update/${SingleData.id}`,{
+                    const responce= await axios.put(`https://synergy-labs-assignment-fgug.onrender.com/update/${SingleData.id}`,{
                         name:SingleData.name,
                         email:SingleData.email,
                         phone:SingleData.phone,
@@ -83,7 +83,7 @@ function Modal(props) {
      }
      
      const MainDeleter= async ()=>{
-          const responce= await axios.delete(`http://localhost:300/delete/${SingleData.id}`);
+          const responce= await axios.delete(`https://synergy-labs-assignment-fgug.onrender.com/delete/${SingleData.id}`);
          if(responce.data.sucess)
          {
             setdelete(true);
