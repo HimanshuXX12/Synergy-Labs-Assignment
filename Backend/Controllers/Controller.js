@@ -1,5 +1,5 @@
 const ModelSchema= require("../Model/Model");
-const data= require("../Data");
+
 function Controller(app)
 {
     app.get("/",async (req,res)=>{
@@ -39,15 +39,15 @@ function Controller(app)
 
     // Adding the data into database
 
-    app.post("/insert", async (req,res)=>{
+    // app.post("/insert", async (req,res)=>{
            
-          await ModelSchema.insertMany(data).then((responce)=>{
-             res.json({error:"Data inserted",sucess:true});
-          }).catch((err)=>{
-             res.json({sucess:false,error:"Failled to input data"});
-             console.log(err);
-          })
-    })
+    //       await ModelSchema.insertMany(data).then((responce)=>{
+    //          res.json({error:"Data inserted",sucess:true});
+    //       }).catch((err)=>{
+    //          res.json({sucess:false,error:"Failled to input data"});
+    //          console.log(err);
+    //       })
+    // })
 
     //  Adding a single data
     app.post("/create", async (req,res)=>{
